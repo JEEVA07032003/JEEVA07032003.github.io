@@ -1,43 +1,261 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b1020;
+    --surface: #121a2d;
+    --text: #f1f5f9;
+    --muted: #a8b4ca;
+    --accent: #60a5fa;
+    --border: #26334b;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0b1120;
-    color: #f8fafc;
-    line-height: 1.6;
-    padding: 80px 10%;
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
 }
 
-h1 {
-    font-size: 52px;
-    color: #60a5fa;
-    margin-bottom: 10px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-h2 {
-    font-size: 28px;
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 9%;
+    border-bottom: 1px solid var(--border);
+    background: rgba(11, 16, 32, 0.96);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.logo span,
+h1 span,
+h2 span,
+footer span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+.card a:hover {
+    color: var(--accent);
+}
+
+.hero {
+    min-height: 580px;
+    padding: 130px 9% 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at 85% 25%, #172c4b 0%, transparent 42%);
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
-p {
-    font-size: 18px;
+h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1.15;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 4vw, 32px);
     color: #cbd5e1;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.intro {
+    max-width: 580px;
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--accent);
+    color: #07111f;
+}
+
+.primary:hover {
+    background: #93c5fd;
+}
+
+.secondary {
+    border: 1px solid #43516b;
+    color: var(--text);
+}
+
+.secondary:hover {
+    border-color: var(--accent);
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.tech-tags span {
+    padding: 6px 13px;
+    background: #172238;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.section {
+    padding: 85px 9%;
+    border-top: 1px solid var(--border);
+}
+
+.section h2 {
+    font-size: 34px;
+    margin-bottom: 22px;
+    letter-spacing: -1px;
+}
+
+.section > p:not(.eyebrow) {
+    max-width: 750px;
+    color: var(--muted);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 26px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #4b75a8;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact {
+    background: #0e1628;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 9%;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 50px 7%;
+    .navbar {
+        padding: 16px 6%;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 90px 7%;
+        min-height: auto;
+    }
+
+    .section {
+        padding: 65px 7%;
+    }
+
+    .section h2 {
+        font-size: 29px;
     }
 
     h1 {
-        font-size: 36px;
-    }
-
-    h2 {
-        font-size: 23px;
+        letter-spacing: -1px;
     }
 }
