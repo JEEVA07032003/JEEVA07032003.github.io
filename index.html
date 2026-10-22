@@ -1,14 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeeva E | Java Developer</title>
     <link rel="stylesheet" href="style.css">
-    <title>Jeeva | Java Developer</title>
 </head>
 <body>
-    <h1>Hi, I'm Jeeva 👋</h1>
-    <h2>Aspiring Java Developer</h2>
-    <p>MCA Graduate | Core Java | SQL</p>
+    <header class="navbar">
+        <a class="logo" href="#home">J<span>.</span></a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+            <h1>Hi, I'm <span>Jeeva E.</span></h1>
+            <h2>Aspiring Java Developer</h2>
+            <p class="intro">
+                MCA graduate building my foundation in Java development,
+                object-oriented programming and SQL.
+            </p>
+            <div class="actions">
+                <a class="btn primary" href="#projects">Explore My Work</a>
+                <a class="btn secondary" href="#contact">Contact Me</a>
+            </div>
+            <div class="tech-tags">
+                <span>Java</span>
+                <span>OOP</span>
+                <span>SQL</span>
+                <span>GitHub</span>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <p class="eyebrow">GET TO KNOW ME</p>
+            <h2>About <span>Me</span></h2>
+            <p>
+                I'm an MCA graduate aspiring to start my career as a Java
+                Developer. I'm currently strengthening my programming skills
+                and learning to build practical applications.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <p class="eyebrow">WHAT I'M LEARNING</p>
+            <h2>Technical <span>Skills</span></h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Core Java</h3>
+                    <p>OOP, classes, objects, arrays, strings and exception handling.</p>
+                </article>
+                <article class="card">
+                    <h3>SQL</h3>
+                    <p>SQL queries and relational database fundamentals.</p>
+                </article>
+                <article class="card">
+                    <h3>Web Basics</h3>
+                    <p>HTML and CSS for creating simple web pages.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <p class="eyebrow">MY PRACTICE WORK</p>
+            <h2>Featured <span>Projects</span></h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Student Grade Tracker</h3>
+                    <p>A Java console application for tracking student grades.</p>
+                    <a href="https://github.com/JEEVA07032003/CodeAlpha_StudentGradeTracker"
+                       target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+                </article>
+                <article class="card">
+                    <h3>Stock Trading Platform</h3>
+                    <p>A Java console project exploring stocks, transactions and portfolios.</p>
+                    <a href="https://github.com/JEEVA07032003/CodeAlpha_StockTradingPlatform"
+                       target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Contact <span>Me</span></h2>
+            <p>Feel free to connect with me about entry-level Java Developer opportunities.</p>
+            <div class="actions">
+                <a class="btn primary" href="mailto:jeevaelumalai09@gmail.com">Email Me</a>
+                <a class="btn secondary"
+                   href="https://www.linkedin.com/in/jeeva-ezhumalai-aa2666370/"
+                   target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a class="btn secondary"
+                   href="https://github.com/JEEVA07032003"
+                   target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed and built by Jeeva E · <span>Java Developer Portfolio</span></p>
+    </footer>
 </body>
 </html>
