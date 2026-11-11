@@ -4,240 +4,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeeva E - Aspiring Java Developer portfolio.">
     <title>Jeeva E | Java Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="navbar">
-    <a class="logo" href="#home">J<span>.</span></a>
+    <a href="#home" class="logo">Jeeva<span>.</span></a>
 
-    <nav>
+    <button class="menu-toggle" id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
         <a href="#experience">Experience</a>
         <a href="#internship">Internship</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <main>
 
-    <!-- Hero Section -->
+    <!-- HOME -->
     <section class="hero" id="home">
-        <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+        <div class="hero-content">
+            <p class="eyebrow">
+                <span class="status-dot"></span>
+                WELCOME TO MY PORTFOLIO
+            </p>
 
-        <h1>Hi, I'm <span>Jeeva E.</span></h1>
+            <h1>Hi, I'm <span>Jeeva E.</span></h1>
 
-        <h2>Aspiring Java Developer</h2>
+            <h2>Aspiring <span class="gradient-text">Java Developer</span></h2>
 
-        <p class="intro">
-            MCA graduate building my foundation in Java development,
-            Object-Oriented Programming and SQL.
-        </p>
+            <p class="hero-description">
+                MCA graduate with a foundation in Core Java,
+                Object-Oriented Programming and SQL.
+                Passionate about learning software development
+                and building my career in Java.
+            </p>
 
-        <div class="actions">
-            <a class="btn primary" href="#about">About Me</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
+            <div class="hero-buttons">
+                <a href="#about" class="btn primary-btn">Explore My Profile</a>
+                <a href="#contact" class="btn outline-btn">Get In Touch</a>
+            </div>
+
+            <div class="hero-tags">
+                <span>Java</span>
+                <span>OOP</span>
+                <span>SQL</span>
+                <span>Oracle</span>
+            </div>
         </div>
 
-        <div class="tech-tags">
-            <span>Java</span>
-            <span>OOP</span>
-            <span>SQL</span>
-            <span>GitHub</span>
+        <div class="hero-visual">
+            <div class="visual-glow"></div>
+            <div class="code-card">
+                <div class="code-header">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p>Developer.java</p>
+                </div>
+
+                <div class="code-content">
+                    <p><span class="code-purple">public class</span>
+                        <span class="code-blue">Developer</span> {</p>
+                    <p class="indent">
+                        <span class="code-purple">public static void</span>
+                        main(String[] args) {
+                    </p>
+                    <p class="indent double">
+                        System.out.println(
+                    </p>
+                    <p class="indent triple">
+                        <span class="code-green">"Hello, World!"</span>
+                    </p>
+                    <p class="indent double">);</p>
+                    <p class="indent">}</p>
+                    <p>}</p>
+                </div>
+                <div class="code-footer">
+                    <span>● Java</span>
+                    <span>UTF-8</span>
+                </div>
+            </div>
+            <div class="floating-label">Learning · Building · Growing</div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <p class="eyebrow">GET TO KNOW ME</p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section-heading">
+            <p class="eyebrow">GET TO KNOW ME</p>
+            <h2>About <span>Me</span></h2>
+            <p>A little introduction about my background and career goals.</p>
+        </div>
 
-        <h2>About <span>Me</span></h2>
+        <div class="about-layout">
+            <div class="about-card profile-card">
+                <div class="profile-icon">J</div>
+                <h3>Jeeva E.</h3>
+                <p class="gradient-text">Aspiring Java Developer</p>
+                <div class="profile-divider"></div>
+                <p class="profile-location">Chennai, Tamil Nadu, India</p>
+                <p class="profile-education">MCA Graduate · 2026</p>
+            </div>
 
-        <p>
-            I'm an MCA graduate aspiring to build my career as a Java Developer.
-            I have a foundation in Core Java, Object-Oriented Programming and SQL,
-            with an interest in developing software applications and improving
-            my problem-solving skills.
-        </p>
+            <div class="about-card about-description">
+                <h3>My Journey</h3>
 
-        <p>
-            Alongside my technical learning, I have professional experience
-            as a Data Collection Analyst at Stats Perform, where I worked
-            with football match-event data and internal data collection tools.
-        </p>
+                <p>
+                    I'm an MCA graduate aspiring to build my career as a
+                    Java Developer. I have a foundation in Core Java,
+                    Object-Oriented Programming and SQL, with an interest
+                    in developing software applications and improving
+                    my problem-solving skills.
+                </p>
 
-        <p>
-            I'm currently strengthening my Java programming skills and
-            preparing for entry-level Java Developer opportunities.
-        </p>
+                <p>
+                    Alongside my technical learning, I have professional
+                    experience as a Data Collection Analyst at Stats Perform,
+                    where I worked with football match-event data and
+                    internal data collection tools.
+                </p>
+
+                <p>
+                    I'm currently strengthening my Java programming skills
+                    and preparing for entry-level Java Developer opportunities.
+                </p>
+
+                <a href="#contact" class="text-link">Let's connect <span>→</span></a>
+            </div>
+        </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <p class="eyebrow">MY TECHNICAL KNOWLEDGE</p>
+    <!-- SKILLS -->
+    <section class="section alternate-section" id="skills">
+        <div class="section-heading">
+            <p class="eyebrow">WHAT I HAVE LEARNED</p>
+            <h2>Technical <span>Skills</span></h2>
+            <p>Technologies and concepts I have been learning and practising.</p>
+        </div>
 
-        <h2>Technical <span>Skills</span></h2>
+        <div class="skills-grid">
 
-        <div class="cards">
-
-            <article class="card">
+            <article class="skill-card">
+                <div class="skill-icon">☕</div>
                 <h3>Core Java</h3>
                 <p>
                     Data Types, Operators, Control Statements,
                     Arrays, Strings, Exception Handling and File Handling.
                 </p>
+                <div class="skill-label">Programming</div>
             </article>
 
-            <article class="card">
+            <article class="skill-card">
+                <div class="skill-icon">◎</div>
                 <h3>Object-Oriented Programming</h3>
                 <p>
                     Encapsulation, Inheritance, Polymorphism,
                     Abstraction and Interfaces.
                 </p>
+                <div class="skill-label">Programming Concepts</div>
             </article>
 
-            <article class="card">
+            <article class="skill-card">
+                <div class="skill-icon">▤</div>
                 <h3>SQL</h3>
                 <p>
                     DQL, Joins, Subqueries, Functions,
                     GROUP BY, HAVING and Aggregate Functions.
                 </p>
+                <div class="skill-label">Database Querying</div>
             </article>
 
-            <article class="card">
-                <h3>Database</h3>
+            <article class="skill-card">
+                <div class="skill-icon">◈</div>
+                <h3>Oracle Database</h3>
                 <p>
-                    Oracle Database 11g XE and Relational Database Fundamentals.
+                    Oracle Database 11g XE and
+                    Relational Database Fundamentals.
                 </p>
+                <div class="skill-label">Database</div>
             </article>
 
-            <article class="card">
+            <article class="skill-card">
+                <div class="skill-icon">⌘</div>
                 <h3>Web Fundamentals</h3>
-                <p>HTML and CSS fundamentals.</p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
-
-        <h2>My <span>Education</span></h2>
-
-        <div class="cards">
-
-            <article class="card">
-                <h3>Master of Computer Applications (MCA)</h3>
-                <p>Hindustan Institute of Technology and Science</p>
-                <p>2024 – 2026 | CGPA: 7.0</p>
-            </article>
-
-            <article class="card">
-                <h3>Bachelor of Computer Applications (BCA)</h3>
-                <p>Adhiparasakthi College</p>
-                <p>2020 – 2023 | CGPA: 7.5</p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Professional Experience Section -->
-    <section id="experience" class="section">
-        <p class="eyebrow">MY PROFESSIONAL JOURNEY</p>
-
-        <h2>Professional <span>Experience</span></h2>
-
-        <div class="cards">
-
-            <article class="card">
-                <h3>Data Collection Analyst</h3>
-
-                <p>Stats Perform | Chennai</p>
-
-                <p>October 2023 – Present</p>
-
                 <p>
-                    Worked for 8 months in a full-time role,
-                    followed by part-time continuation.
+                    HTML and CSS fundamentals for
+                    creating and styling web pages.
+                </p>
+                <div class="skill-label">Web Development</div>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-icon">⌁</div>
+                <h3>Development Tools</h3>
+                <p>
+                    GitHub and Java development
+                    environment fundamentals.
+                </p>
+                <div class="skill-label">Tools</div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="section-heading">
+            <p class="eyebrow">MY PROFESSIONAL JOURNEY</p>
+            <h2>Work <span>Experience</span></h2>
+            <p>My professional experience outside software development.</p>
+        </div>
+
+        <div class="timeline">
+            <article class="timeline-item">
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <div>
+                            <p class="timeline-category">PROFESSIONAL EXPERIENCE</p>
+                            <h3>Data Collection Analyst</h3>
+                            <p class="company-name">Stats Perform · Chennai</p>
+                        </div>
+                        <span class="timeline-date">Oct 2023 – Present</span>
+                    </div>
+
+                    <p>
+                        Worked for 8 months in a full-time role,
+                        followed by part-time continuation.
+                    </p>
+
+                    <ul>
+                        <li>Collected football match-event information.</li>
+                        <li>Worked with player, team and pass-related data.</li>
+                        <li>Used internal applications for match-event data collection.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- INTERNSHIP -->
+    <section class="section alternate-section" id="internship">
+        <div class="section-heading">
+            <p class="eyebrow">LEARNING EXPERIENCE</p>
+            <h2>Internship <span>Experience</span></h2>
+            <p>My internship experience and professional learning.</p>
+        </div>
+
+        <div class="timeline">
+            <article class="timeline-item">
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <div>
+                            <p class="timeline-category">COMPLETED INTERNSHIP</p>
+                            <h3>Backend Development Intern</h3>
+                            <p class="company-name">CodeAlpha · Online</p>
+                        </div>
+                        <span class="timeline-date">September 2025</span>
+                    </div>
+
+                    <p>
+                        Successfully completed a Backend Development
+                        Internship at CodeAlpha.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+        <div class="section-heading">
+            <p class="eyebrow">MY ACADEMIC BACKGROUND</p>
+            <h2>My <span>Education</span></h2>
+            <p>My academic qualifications.</p>
+        </div>
+
+        <div class="education-grid">
+            <article class="education-card">
+                <div class="education-icon">🎓</div>
+                <p class="timeline-category">POSTGRADUATION</p>
+                <h3>Master of Computer Applications</h3>
+                <p class="company-name">Hindustan Institute of Technology and Science</p>
+                <div class="education-details">
+                    <span>2024 – 2026</span>
+                    <span>CGPA: 7.0</span>
+                </div>
+            </article>
+
+            <article class="education-card">
+                <div class="education-icon">🎓</div>
+                <p class="timeline-category">UNDERGRADUATION</p>
+                <h3>Bachelor of Computer Applications</h3>
+                <p class="company-name">Adhiparasakthi College</p>
+                <div class="education-details">
+                    <span>2020 – 2023</span>
+                    <span>CGPA: 7.5</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+        <div class="section-heading">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2>Get In <span>Touch</span></h2>
+            <p>Feel free to connect with me about entry-level Java Developer opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Let's start a conversation</h3>
+                <p>
+                    I'm looking forward to starting my career as a Java Developer.
+                    You can reach me through email or connect with me on my
+                    professional profiles.
                 </p>
 
+                <a class="contact-link" href="mailto:jeevaelumalai09@gmail.com">
+                    <span class="contact-symbol">✉</span>
+                    <span>
+                        <small>Email</small>
+                        jeevaelumalai09@gmail.com
+                    </span>
+                </a>
+
+                <a class="contact-link"
+                   href="https://www.linkedin.com/in/jeeva-ezhumalai-aa2666370/"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="contact-symbol">in</span>
+                    <span>
+                        <small>LinkedIn</small>
+                        Connect with me
+                    </span>
+                </a>
+
+                <a class="contact-link"
+                   href="https://github.com/JEEVA07032003"
+                   target="_blank" rel="noopener noreferrer">
+                    <span class="contact-symbol">⌘</span>
+                    <span>
+                        <small>GitHub</small>
+                        View my GitHub profile
+                    </span>
+                </a>
+            </div>
+
+            <div class="contact-message">
+                <div class="message-decoration">"</div>
+                <h3>Thank you for visiting!</h3>
                 <p>
-                    Collected football match-event data, including
-                    player details, team information and pass-related
-                    events using internal data collection applications.
+                    I'm continuously learning and working towards
+                    becoming a Java Developer. Let's connect and
+                    explore opportunities to grow.
                 </p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Internship Section -->
-    <section id="internship" class="section">
-        <p class="eyebrow">MY INTERNSHIP JOURNEY</p>
-
-        <h2>Internship <span>Experience</span></h2>
-
-        <div class="cards">
-
-            <article class="card">
-                <h3>Backend Development Intern</h3>
-
-                <p>CodeAlpha | Online</p>
-
-                <p>September 2025</p>
-
-                <p>
-                    Successfully completed a Backend Development
-                    Internship at CodeAlpha.
-                </p>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <p class="eyebrow">LET'S CONNECT</p>
-
-        <h2>Contact <span>Me</span></h2>
-
-        <p>
-            Feel free to connect with me about entry-level Java Developer opportunities.
-        </p>
-
-        <div class="actions">
-
-            <a class="btn primary"
-               href="mailto:jeevaelumalai09@gmail.com">
-                Email Me
-            </a>
-
-            <a class="btn secondary"
-               href="https://www.linkedin.com/in/jeeva-ezhumalai-aa2666370/"
-               target="_blank"
-               rel="noopener noreferrer">
-                LinkedIn
-            </a>
-
-            <a class="btn secondary"
-               href="https://github.com/JEEVA07032003"
-               target="_blank"
-               rel="noopener noreferrer">
-                GitHub
-            </a>
-
+                <a href="mailto:jeevaelumalai09@gmail.com" class="btn primary-btn">
+                    Send Me an Email
+                </a>
+            </div>
         </div>
     </section>
 
 </main>
 
 <footer>
-    <p>Designed and built by Jeeva E · <span>Java Developer Portfolio</span></p>
+    <a href="#home" class="footer-logo">Jeeva<span>.</span></a>
+    <p>Designed and built by Jeeva E.</p>
+    <p class="footer-copy">© 2026 Jeeva E. All rights reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
