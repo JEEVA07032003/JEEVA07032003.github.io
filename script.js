@@ -1,26 +1,31 @@
 
-/* Mobile Navigation */
+/* MOBILE NAVIGATION */
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
 
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+
+    const isOpen = navLinks.classList.toggle("show");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
 });
 
-
-/* Close Mobile Menu After Clicking */
+/* CLOSE MENU AFTER CLICKING */
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
     link.addEventListener("click", () => {
+
         navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+
     });
 
 });
 
-
-/* Scroll Reveal Animation */
+/* SCROLL REVEAL ANIMATION */
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -43,29 +48,32 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 });
 
 revealElements.forEach(element => {
+
     revealObserver.observe(element);
+
 });
 
-
-/* Active Navbar Link While Scrolling */
+/* ACTIVE NAVBAR LINK */
 
 const sections = document.querySelectorAll("section[id]");
 const navItems = document.querySelectorAll(".nav-links a");
 
-const sectionObserver = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
         if (entry.isIntersecting) {
 
-            const currentId = entry.target.getAttribute("id");
+            const currentId = entry.target.id;
 
             navItems.forEach(link => {
 
                 link.classList.remove("active");
 
                 if (link.getAttribute("href") === "#" + currentId) {
+
                     link.classList.add("active");
+
                 }
 
             });
@@ -75,9 +83,11 @@ const sectionObserver = new IntersectionObserver((entries) => {
     });
 
 }, {
-    threshold: 0.4
+    rootMargin: "-30% 0px -60% 0px"
 });
 
 sections.forEach(section => {
+
     sectionObserver.observe(section);
+
 });
