@@ -8,6 +8,7 @@ menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
 });
 
+
 /* Close Mobile Menu After Clicking */
 
 document.querySelectorAll(".nav-links a").forEach(link => {
@@ -17,6 +18,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     });
 
 });
+
 
 /* Scroll Reveal Animation */
 
@@ -43,6 +45,7 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 revealElements.forEach(element => {
     revealObserver.observe(element);
 });
+
 
 /* Active Navbar Link While Scrolling */
 
@@ -77,31 +80,4 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => {
     sectionObserver.observe(section);
-});
-
-// SCROLL REVEAL ANIMATION
-
-const revealElements = document.querySelectorAll(
-    ".section-heading, .about-card, .skill-card, " +
-    ".timeline-item, .education-card, " +
-    ".contact-info, .contact-message"
-);
-
-revealElements.forEach((element) => {
-    element.classList.add("reveal");
-});
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.15
-});
-
-revealElements.forEach((element) => {
-    observer.observe(element);
 });
