@@ -957,21 +957,25 @@ button {
 
 .typing-text {
     display: inline-block;
-    width: 0;
-    white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid var(--primary);
-    animation:
-        typing 3s steps(22, end) forwards,
-        blink 0.7s step-end infinite;
+    white-space: nowrap;
+    border-right: 3px solid #00d4ff;
+    width: 0;
+    animation: typing 4s steps(22) infinite,
+               blink 0.7s infinite;
 }
 
 @keyframes typing {
-    from {
+    0% {
         width: 0;
     }
-    to {
+
+    70% {
         width: 22ch;
+    }
+
+    100% {
+        width: 0;
     }
 }
 
